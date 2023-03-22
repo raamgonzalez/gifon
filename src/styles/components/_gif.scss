@@ -1,0 +1,19 @@
+.gif{
+    border: 1px solid black;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+    width: 100%;
+    color: honeydew;
+    text-decoration: none;
+
+    &__h4{
+        margin:0;
+    }
+
+    &__img{
+        object-fit: contain;
+    }
+}
