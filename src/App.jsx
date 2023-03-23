@@ -17,9 +17,6 @@ function App() {
     <div className="app">
       <section className='app__content'>
         <h1>gifON</h1>
-        <Link to='/gif/panda'>Gifs de pandas</Link>
-        <Link to='/gif/dog'>Gifs de dog</Link>
-        <Link to='/gif/cat'>Gifs de cat</Link>
         <Route 
           component={Home}
           path='/'

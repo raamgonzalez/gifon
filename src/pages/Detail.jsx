@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Detail = () => {
+const Detail = ({params}) => {
+
     return (
-        <div>Detail</div>
+        <>
+            <h2>Gifs con id {params.id}</h2>
+        </>
     )
 }
 

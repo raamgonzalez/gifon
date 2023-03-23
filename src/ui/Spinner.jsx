@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Loading = () => {
+const Spinner = () => {
     return (
         <div>Loading...</div>
     )
 }
 
-export default Loading
+export default Spinner
