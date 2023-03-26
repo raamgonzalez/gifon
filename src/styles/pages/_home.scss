@@ -1,0 +1,81 @@
+.home{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &__form{
+        margin-bottom: 5em;
+
+        align-self: center;
+        width: fit-content;
+
+        .home__input{
+            padding: 1em;
+            margin: 0;
+        }
+        .home__button{
+            border: 0.2rem solid rgb(180, 42, 192);
+            border-radius: 0;
+            margin: 0;
+            padding: 1em;
+        }
+    }
+
+    &__section{
+        display: grid;
+        grid-template-columns: 1fr 0.3fr;
+
+        .home__lastsearch{
+            display: flex;
+            flex-direction: column;
+        }
+        
+
+        .home__popular{
+            text-align: left;
+            width: 100%;
+            padding:0 2em 2em 2em;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            .home__li{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    
+    }
+    
+    
+    &__h3{
+        font-size: 1.5em;
+        font-weight: 600;
+        margin: 0 0 1em 0;
+        padding: 0;
+        text-align: left;
+    }
+
+}
+
+
+
+
+// <section className='home__section'>
+// <section className='home__popular'>
+//     <h3 className='home__h3'>Gifs populares</h3>
+//     <ul className='home__ul'>
+//         {
+//             POPULAR_GIFS.map((popularGif) => (
+//             <li className='popular__li' key={popularGif}>
+//                 <Link to={`/search/${popularGif}`}> Gifs de {popularGif}</Link>
+//             </li>))
+//         }
+//     </ul>
+// </section>
+// <section className='home__lastsearch'>
+//     <h3 className='home__h3'>Última busqueda</h3>
+//     <ListOfGifs gifs={gifs}/>
+// </section>

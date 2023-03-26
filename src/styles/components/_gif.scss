@@ -1,18 +1,23 @@
 .gif{
-    background-color: azure;
-    border: 1px solid black;
-    -webkit-column-break-inside: avoid; //Chrome, Safari, Opera
-    display: inline-block; 
-    break-inside: avoid; //IE 10+
-    page-break-inside: avoid; // Firefox
+    // -webkit-column-break-inside: avoid; //Chrome, Safari, Opera
+    // display: inline-block; 
+    // break-inside: avoid; //IE 10+
+    // page-break-inside: avoid; // Firefox
     width: 100%;
     color: black;
+    margin-bottom: .5em;
+    position: relative;
 
     &__h4{
+        bottom: 0;
+        position: absolute;
         margin:0;
+        background-color: rgba(0, 0, 0, 0.233);
+        color: azure;
     }
 
     &__img{
+        width: 100%;
         object-fit: contain;
     }
 }

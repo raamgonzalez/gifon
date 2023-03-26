@@ -25,21 +25,29 @@ const Home = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <input type='text' placeholder='Search a gif here...' onChange={handlechange} value={keyword}/>
-                <button>Search</button>
-            </form>
-            <h3 className='seacrh__h3'>Última busqueda</h3>
-            <ListOfGifs gifs={gifs}/>
-            <h3 className='popular__h3'>Gifs populares</h3>
-            <ul className='popular__ul'>
-                {
-                    POPULAR_GIFS.map((popularGif) => (
-                    <li className='popular__li' key={popularGif}>
-                        <Link to={`/search/${popularGif}`}> Gifs de {popularGif}</Link>
-                    </li>))
-                }
-            </ul>
+            <section className='home'>
+                <form className='home__form' onSubmit={handleSubmit}>
+                    <input className='home__input' type='text' placeholder='Search a gif' onChange={handlechange} value={keyword}/>
+                    <button className='home__button' >Search</button>
+                </form>
+                <section className='home__section'>
+                    <section className='home__lastsearch lastsearch'>
+                        <h3 className='home__h3'>Última busqueda</h3>
+                        <ListOfGifs gifs={gifs}/>
+                    </section>
+                    <section className='home__popular'>
+                        <h3 className='home__h3'>Gifs populares</h3>
+                        <ul className='home__ul'>
+                            {
+                                POPULAR_GIFS.map((popularGif) => (
+                                <li className='home__li' key={popularGif}>
+                                    <Link to={`/search/${popularGif}`}> Gifs de {popularGif}</Link>
+                                </li>))
+                            }
+                        </ul>
+                    </section>
+                </section>
+            </section>
         </>
     )
 }
