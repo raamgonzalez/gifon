@@ -4,7 +4,7 @@ import Gif from './Gif'
 const ListOfGifs = ({gifs}) => {
 
     return (
-        <section>
+        <section className='listgifs__section'>
             {
                 gifs.map(({id, title, url}) => <Gif id={id} key={id} title={title} url={url}/>)
             }

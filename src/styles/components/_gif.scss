@@ -1,13 +1,12 @@
 .gif{
+    background-color: azure;
     border: 1px solid black;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    margin: 1rem;
-    padding: 1rem;
+    -webkit-column-break-inside: avoid; //Chrome, Safari, Opera
+    display: inline-block; 
+    break-inside: avoid; //IE 10+
+    page-break-inside: avoid; // Firefox
     width: 100%;
-    color: honeydew;
-    text-decoration: none;
+    color: black;
 
     &__h4{
         margin:0;

@@ -1,23 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import Spinner from '../ui/Spinner'
+import React      from 'react'
+import Spinner    from '../ui/Spinner'
 import ListOfGifs from '../components/ListOfGifs'
-import getGifs from '../services/getGifs'
+import useGifs    from '../hooks/useGifs'
 
 const SearchResults = ({params}) => {
 
     const { keyword } = params
-    const [gifs, setGifs] = useState([])
-    const [loading, setLoading] = useState(false)
-
-    useEffect(function () {
-            setLoading(true)
-            getGifs({ keyword })
-            .then(gifs => {
-                setGifs(gifs)
-                setLoading(false)}
-            )
-        },[keyword])
-
+    const { loading, gifs} = useGifs({ keyword })
+    
     return (
         <>
         {loading 
