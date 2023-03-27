@@ -11,7 +11,7 @@ const Detail = ({params}) => {
 
     return (
         <>
-            <h2>Gifs con id {params.id}</h2>
+            <h3 className='Detail-title'>{gif.title}</h3>
             <Gif {...gif}/>
         </>
     )

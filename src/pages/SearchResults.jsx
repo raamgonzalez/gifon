@@ -12,7 +12,9 @@ const SearchResults = ({params}) => {
         <>
         {loading 
         ? <Spinner/> 
-        : <ListOfGifs gifs={gifs}/>
+        : <>
+        <h3 className='Search-title'>{decodeURI(keyword)}</h3>
+        <ListOfGifs gifs={gifs}/></> 
         }
         </>
     )

@@ -17,7 +17,8 @@ function App() {
   return (
       <div className="app">
         <section className='app__content'>
-          <Link to='/'><h1>gifON</h1></Link>
+        {/* <h1>gifON</h1> */}
+          <Link to='/'><img className='app__img' src='./gifshoot_logo.svg'/></Link>
           <GifsContext>
             <Route 
               component={Home}

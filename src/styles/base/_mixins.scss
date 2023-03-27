@@ -1,0 +1,29 @@
+/* Mixins Flex*/
+
+@mixin flex( $direction, $cut, $just, $align, $gap ) {
+    display: flex;
+    flex-flow: $direction $cut;
+    justify-content: $just;
+    align-items: $align;
+    gap: $gap;
+}
+
+/* Mixins responsive */
+
+@mixin dp( $min : 768px, $max : 1260px ){
+    @media (min-width: $min) and (max-width: $max) {
+        @content; 
+    }
+}
+
+@mixin mb( $min : 240px, $max : 768px ){
+    @media (min-width: $min) and (max-width: $max) {
+        @content; 
+    }
+}
+
+@mixin gl( $min : 240px, $max : 1260px ){
+    @media (min-width: $min) and (max-width: $max) {
+        @content; 
+    }
+}

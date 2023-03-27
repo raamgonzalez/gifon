@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { Link, useLocation } from 'wouter'
 import ListOfGifs from '../components/ListOfGifs'
 import useGifs from '../hooks/useGifs'
+import TrendingSearches from '../components/TrendingSearches'
 
-const POPULAR_GIFS = ["Panda", "Venezuela", "Cat", "homer", "funny"]
 
 const Home = () => {
 
@@ -35,18 +35,8 @@ const Home = () => {
                         <h3 className='home__h3'>Última busqueda</h3>
                         <ListOfGifs gifs={gifs}/>
                     </section>
-                    <section className='home__popular'>
-                        <h3 className='home__h3'>Gifs populares</h3>
-                        <ul className='home__ul'>
-                            {
-                                POPULAR_GIFS.map((popularGif) => (
-                                <li className='home__li' key={popularGif}>
-                                    <Link to={`/search/${popularGif}`}> Gifs de {popularGif}</Link>
-                                </li>))
-                            }
-                        </ul>
-                    </section>
-                </section>
+                        <TrendingSearches/>
+                    </section>             
             </section>
         </>
     )

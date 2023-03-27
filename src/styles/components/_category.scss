@@ -1,0 +1,27 @@
+.Category{
+    margin: 0 0 0 2em;
+
+    &-title{
+        font-size: 1.5em;
+        font-weight: 600;
+        margin: 0 0 1em 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    &-list{
+        width: 100%;
+        margin: 0 0 2em 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+        font-size: medium;
+    }
+
+    &-link{
+        background-color: coral;
+        padding: 0.4em;
+        color: black;
+    }
+}
