@@ -11,7 +11,7 @@ const Detail = ({params}) => {
 
     return (
         <>
-            <h3 className='Detail-title'>{gif.title}</h3>
+            <h3 className='App-title'>{gif.title}</h3>
             <Gif {...gif}/>
         </>
     )
