@@ -7,6 +7,7 @@ import SearchResults from './pages/SearchResults'
 import Detail from './pages/Detail'
 import GifsContext from './context/GifsContext'
 import ArrowTop from './ui/ArrowTop'
+import SearchForm from './components/SearchForm'
 
 
 

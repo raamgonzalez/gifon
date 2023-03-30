@@ -6,29 +6,7 @@
     width: 100%;
     margin: 0 auto;
 
-    .Search{
-        margin-bottom: 3em;
-        display: flex;
-        align-self: center;
-        width: fit-content;
 
-
-        // box-shadow: rgba(223, 15, 119, 0.829) 4px 5px;
-        // box-shadow: #f6d101c0 0px 2px 5px -1px, #f6d1011e 0px 1px 3px -1px;
-
-        &-input{
-            width: 13.5rem;
-            padding: 1em;
-            margin: 0;
-
-        }
-        &-button{
-            border: 1px solid rgb(180, 42, 192);
-            // background-color: rgba(180, 42, 192, 0.87);
-            box-shadow: none;
-            padding: 1em;
-        }
-}
 
     &__section{
         display: grid;
@@ -70,8 +48,8 @@
         padding: 0;
         text-align: left;
     }
-
 }
+
 
 
 

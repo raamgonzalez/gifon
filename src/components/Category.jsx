@@ -5,7 +5,7 @@ const Category = ({name, options = []}) => {
 
     return (
         <section className='Category'>
-            <h3 className='Category-title'>{name}</h3>
+            <h3 className='App-title'>{name}</h3>
             <ul className='Category-list'>
                 {options.map((singleOption) =>(
                     <li key={singleOption}>

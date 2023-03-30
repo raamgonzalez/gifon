@@ -26,7 +26,7 @@ const Home = () => {
                 <SearchForm onSubmit={handleSubmit}/>
                 <section className='home__section'>
                     <section className='home__lastsearch lastsearch'>
-                        <h3 className='home__h3'>Last search</h3>
+                        <h3 className='App-title'>Last search</h3>
                         <ListOfGifs gifs={gifs}/>
                     </section>
                         <TrendingSearches/>

@@ -1,12 +1,11 @@
 .Arrowtop{
     position: fixed;
-    bottom: 5rem;
+    bottom: 3rem;
     right: 5rem;
 
     &-arrow{
     background-color: crimson;
-    border-radius: 50%;
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 0.3rem;
     }
 }

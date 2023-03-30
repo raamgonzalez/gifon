@@ -4,6 +4,7 @@ import ListOfGifs from '../components/ListOfGifs'
 import useGifs    from '../hooks/useGifs'
 import useNearScreen from '../hooks/useNearScreen'
 import debounce from 'just-debounce-it'
+import SearchForm from '../components/SearchForm'
 
 const SearchResults = ({params}) => {
 
@@ -26,7 +27,7 @@ const SearchResults = ({params}) => {
         {loading 
         ? <Spinner/> 
         : <>
-        <h3 className='App-title'>{decodeURI(keyword)}</h3>
+        <h3 className='App-title'>{decodeURI(keyword[0].toUpperCase()+keyword.substring(1))}</h3>
         <ListOfGifs gifs={gifs}/>
         </> 
         }

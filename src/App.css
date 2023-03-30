@@ -1,6 +1,10 @@
+.app{
+  margin: 0 20rem;
+}
+
+
 
 .app__content{
-  /* background-color: darkslategray; */
   min-height: 100vh;
   
   
@@ -23,4 +27,6 @@
 .App-title{
   text-align: left;
   align-self: flex-start;
+  margin: 0 0 2rem 0;
+  font-size: 1.7rem;
 }

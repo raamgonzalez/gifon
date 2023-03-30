@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import IconSearch from '../ui/IconSearch'
 
 const SearchForm = ({onSubmit}) => {
     const [keyword, setKeyword] = useState('')
@@ -18,7 +19,7 @@ const SearchForm = ({onSubmit}) => {
     return (
     <form className='Search' onSubmit={handleSubmit}>
         <input className='Search-input' type='text' placeholder='Search a gif' onChange={handlechange} value={keyword}/>
-        <button className='Search-button'>Search</button>
+        <button className='Search-button'><IconSearch/></button>
     </form>
     )
 }
