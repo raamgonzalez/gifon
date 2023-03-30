@@ -16,11 +16,11 @@ const SearchForm = ({onSubmit}) => {
 
 
     return (
-    <form className='home__form' onSubmit={handleSubmit}>
-        <input className='home__input' type='text' placeholder='Search a gif' onChange={handlechange} value={keyword}/>
-        <button className='home__button'>Search</button>
+    <form className='Search' onSubmit={handleSubmit}>
+        <input className='Search-input' type='text' placeholder='Search a gif' onChange={handlechange} value={keyword}/>
+        <button className='Search-button'>Search</button>
     </form>
     )
 }
 
-export default SearchForm
+export default React.memo(SearchForm)

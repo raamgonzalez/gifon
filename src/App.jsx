@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import SearchResults from './pages/SearchResults'
 import Detail from './pages/Detail'
 import GifsContext from './context/GifsContext'
+import ArrowTop from './ui/ArrowTop'
 
 
 
@@ -15,7 +16,7 @@ function App() {
 
 
   return (
-      <div className="app">
+      <div id='inicio' className="app">
         <section className='app__content'>
         {/* <h1>gifON</h1> */}
           <Link to='/'><img className='app__img' src='./gifshoot_logo.svg'/></Link>
@@ -33,6 +34,7 @@ function App() {
               path='/gif/:id' 
               />
           </GifsContext>
+          <ArrowTop/>
         </section>
       </div>
   )

@@ -1,3 +1,165 @@
+@import './settings';
+
+// /* Definimos las Custom properties */
 // :root{
-//     --results-columns:4;
+//   /* Colores */
+//   $primary         : #FCFCFE;
+
+//   /* Tipografía */
+//   --tipo-principal   : Helvetica, Arial, sans-serif;
+//   --tipo-secundaria  : Verdana;
+// }
+
+
+#root {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* (Opcional) Las adaptamos al modo oscuro */
+@media (prefers-color-scheme: dark) {
+    :root{
+        --negro         : #ececec;
+    }
+}
+
+/* (Opcional) Configuramos si un usuario ha activado el modo alto contraste. (WD) */
+@media (prefers-contrast: high){
+    //Agregar colores con alto contraste
+    :root{}
+}
+
+/* (Opcional) Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+}
+}
+
+/* Reseteamos los margin y paddings de todas las etiquetas */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i,dl, dt, dd, ol, ul, li, fieldset, 
+form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details,
+figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video , 
+*::before , *::after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+*::before , *::after{
+    display: block;
+}
+
+/* Evitamos problemas con las imagenes */
+img , picture , video , iframe , figure{
+    max-width: 100%;
+    width: 100%;
+    display: block;
+  /* (Opcional) */ object-fit: cover;        
+  /* (Opcional) */ object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+    display: block;
+    text-decoration: none;
+    color:inherit;
+    font-size:inherit;
+}
+/* ... excepto los que se encuentran en párrafos */
+p a {
+    display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+    list-style-type: none;
+}
+
+/* (Opcional) Configuramos anclas suaves */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1 , h2 , h3 , h4 , h5 , h6 , p ,span , a , strong , blockquote , i , b , u , em {
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color:inherit;
+}
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+	content: none;
+}
+
+/* (Opcional) Configuramos el texto que seleccionamos */
+::selection {
+    // background-color: $primary;
+    // color: $secondary;
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form , input, textarea, select , button , label{
+    font-family: inherit;
+    font-size: inherit;
+    hyphens: auto;
+    background-color: transparent;
+    color:inherit;
+    display: block;
+    /* (Opcional) */ appearance: none;
+}
+
+/* Reseteamos las tablas */
+table , tr , td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg{
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+    // min-height  : 100vh;
+    // font-size   : $font-size-5;
+    // font-family : $font-base;
+    // background-color: $primary;
+    // background-image:  url('./media/back_01.svg');
+    // color       : $text;
+
+
+
+  /* (Opcional) */ line-height:  1.4em;
+  // /* (Opcional) */ hyphens: auto;
+  /* (Opcional) */ font-smooth: always;
+  /* (Opcional) */ -webkit-font-smoothing: antialiased;
+  /* (Opcional) */ -moz-osx-font-smoothing: grayscale;
+
+
+}
+// body::after{
+//   display: block;
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index:1;
+//   opacity: 0.1;
+//   content: "";
+//   background-repeat: no-repeat;
+//   background-position: 50% 0;
+//   background-size: cover;  
 // }

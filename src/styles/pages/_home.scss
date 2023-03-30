@@ -3,29 +3,41 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    width: 100%;
+    margin: 0 auto;
 
-    &__form{
+    .Search{
         margin-bottom: 3em;
-
+        display: flex;
         align-self: center;
         width: fit-content;
 
-        .home__input{
+
+        // box-shadow: rgba(223, 15, 119, 0.829) 4px 5px;
+        // box-shadow: #f6d101c0 0px 2px 5px -1px, #f6d1011e 0px 1px 3px -1px;
+
+        &-input{
             width: 13.5rem;
             padding: 1em;
             margin: 0;
+
         }
-        .home__button{
-            border: 0.2rem solid rgb(180, 42, 192);
-            border-radius: 0;
-            margin: 0;
+        &-button{
+            border: 1px solid rgb(180, 42, 192);
+            // background-color: rgba(180, 42, 192, 0.87);
+            box-shadow: none;
             padding: 1em;
         }
-    }
+}
 
     &__section{
         display: grid;
         grid-template-columns: 0.8fr 0.2fr;
+
+        @include mb(){
+            grid-template-columns: 1fr;
+            margin: 0 auto;
+        }
 
         .home__lastsearch{
             display: flex;

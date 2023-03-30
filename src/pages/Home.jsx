@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { Link, useLocation } from 'wouter'
+import { useState, useCallback } from 'react'
+import { useLocation } from 'wouter'
 import ListOfGifs from '../components/ListOfGifs'
 import useGifs from '../hooks/useGifs'
 import TrendingSearches from '../components/TrendingSearches'
@@ -14,10 +14,10 @@ const Home = () => {
     const {loading, gifs} = useGifs()
 
 
-    const handleSubmit = ({keyword}) => {
+    const handleSubmit = useCallback(({keyword}) => {
         //navegar a otra ruta
         pushLocation(`/search/${keyword}`)
-    }
+    }, [pushLocation])
 
 
     return (

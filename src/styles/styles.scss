@@ -1,3 +1,4 @@
+
 /*
 *Reset
 */
@@ -15,6 +16,14 @@
 @import './components/listgifs';
 @import './components/spinner';
 @import './components/category';
+@import './components/searchform';
+
+/*
+*UI
+*/
+
+@import './ui/arrowtop';
+
 
 /*
 *Pages
@@ -23,3 +32,5 @@
 @import './pages/home';
 @import './pages/searchresults';
 @import './pages/detail';
+
+

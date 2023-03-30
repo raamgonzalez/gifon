@@ -18,10 +18,14 @@
         flex-wrap: wrap;
         gap: 1em;
         font-size: medium;
+
+        @include mb(){
+            margin: 0 auto;
+        }
     }
 
     &-link{
-        background-color: coral;
+        background-color: #f6d301;
         padding: 0.4em;
         color: black;
     }
