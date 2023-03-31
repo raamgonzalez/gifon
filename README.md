@@ -30,7 +30,7 @@ Deploy en local
 - framer-motion
 - react
 - react-dom
-- react-router-dom
+- wouter
 - sass
 - vite
 
