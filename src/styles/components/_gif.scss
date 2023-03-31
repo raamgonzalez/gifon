@@ -1,4 +1,4 @@
-.gif{
+.Gif{
     // -webkit-column-break-inside: avoid; //Chrome, Safari, Opera
     // display: inline-block; 
     // break-inside: avoid; //IE 10+
@@ -9,19 +9,25 @@
     margin-bottom: 0.5em;
     position: relative;
 
-    &__h4{
+
+
+    &-h4{
         bottom: 0;
         position: absolute;
         // margin: 0 0 0.2em 0.2em;
         background-color: rgba(0, 0, 0, 0.233);
         color: azure;
         font-weight: 300;
+        border-radius: 1rem;
+        margin: 0;
+        padding: 5px 7px;
     }
 
-    &__img{
+    &-img{
         // vertical-align: top;
         // height: inherit;
         width: 100%;
         object-fit: cover;
+        border-radius: 0.5rem;
     }
 }

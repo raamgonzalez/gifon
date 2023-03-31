@@ -21,7 +21,8 @@
 
 .app__img{
   width: 20rem;
-  margin: 0 0 5em 0;
+  margin: 2.5rem 0 5em 0;
+  cursor: pointer;
 }
 
 .App-title{

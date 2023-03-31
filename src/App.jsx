@@ -7,11 +7,11 @@ import SearchResults from './pages/SearchResults'
 import Detail from './pages/Detail'
 import GifsContext from './context/GifsContext'
 import ArrowTop from './ui/ArrowTop'
-import SearchForm from './components/SearchForm'
+import { motion } from 'framer-motion'
 
 
 
-function App() {
+function App() { 
 
   const [keyword, setKeyWord] = useState('morty')
 
@@ -20,7 +20,18 @@ function App() {
       <div id='inicio' className="app">
         <section className='app__content'>
         {/* <h1>gifON</h1> */}
-          <Link to='/'><img className='app__img' src='./gifshoot_logo.svg'/></Link>
+          <Link to='/'>
+          <motion.img 
+                initial={{
+                  y:0,
+                  scale: 0
+              }}
+              animate={{
+                  y: 0,
+                  scale: 1,
+              }}
+            className='app__img' src='./gifshoot_logo.svg'/>
+          </Link>
           <GifsContext>
             <Route 
               component={Home}
