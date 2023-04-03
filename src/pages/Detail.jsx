@@ -1,13 +1,10 @@
-import { useContext } from 'react'
-import { GifsContext } from '../context/GifsContext'
 import Gif from '../components/Gif'
-import { useGlobalGifs } from '../hooks/useGlobalGifs'
+import useSingleGif from '../hooks/useSingleGif'
 
 const Detail = ({params}) => {
-    
-    const gifs = useGlobalGifs()
 
-    const gif = gifs.find(singleGif => singleGif.id === params.id)
+    const { gif } = useSingleGif({id: params.id})
+    if(!gif) return null
 
     return (
         <>
