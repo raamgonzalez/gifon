@@ -14,17 +14,24 @@
         width: 13.5rem;
         padding: 1em;
         margin: 0;
-        border-radius: 1rem;
+        border-radius: 1rem 0 0 1rem;
+                border: 1px solid #bdbaba;
     }
     
     &-button{
         cursor: pointer;
         // border: 1px solid rgb(180, 42, 192);
-        // background-color: rgba(180, 42, 192, 0.87);
+        background-color: rgb(126, 2, 138);
         box-shadow: none;
         padding: 1em;
-        border-radius: 1rem;
-        margin: 0 0 0 0.5rem;
+        border-radius: 0 1rem 1rem 0;
+        border: 1px solid #bdbaba;
+        // margin: 0 0 0 0.5rem;
+
+        &:hover{
+            background-color: rgb(180, 42, 192);
+            // border: 1px solid rgb(180, 42, 192);
+        }
     }
 }
 

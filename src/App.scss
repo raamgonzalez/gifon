@@ -1,0 +1,52 @@
+@import './styles/base/mixins';
+
+
+.App{
+  margin: 0 20rem;
+  
+  @include dp(){
+    margin: 0 auto;
+  }
+
+  &-wrapper{
+    min-height: 100vh;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 1rem;
+    color: azure;  
+  }
+
+  &-h1{
+    margin: 2rem 0 4rem 0;
+    font-size: 4rem;
+
+    &:hover{
+      text-decoration: underline #E7E15F;
+      cursor: pointer;
+    }
+
+  .App-span{
+      color: #b10136;
+    }
+  .App-span--color01{
+      color: #5f3fe9;
+    }
+  .App-span--color02{
+      color: #E7E15F;
+    }
+  }
+}
+
+
+.App-title{
+  text-align: left;
+  align-self: flex-start;
+  margin: 0 0 2rem 0;
+  font-size: 1.7rem;
+}
+
+

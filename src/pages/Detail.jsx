@@ -1,9 +1,14 @@
+import { Redirect } from 'wouter'
 import Gif from '../components/Gif'
 import useSingleGif from '../hooks/useSingleGif'
+import Spinner from '../ui/Spinner'
 
 const Detail = ({params}) => {
 
-    const { gif } = useSingleGif({id: params.id})
+    const { gif, isLoading, isError } = useSingleGif({id: params.id})
+    
+    if(isLoading) return <Spinner/>
+    if(isError) return <Redirect to='/404'/>
     if(!gif) return null
 
     return (

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './App.css'
+import './App.scss'
 import './styles/styles.scss'
 import { Route, Link } from 'wouter'
 import Home from './pages/Home'
@@ -8,20 +8,41 @@ import Detail from './pages/Detail'
 import GifsContext from './context/GifsContext'
 import ArrowTop from './ui/ArrowTop'
 import { motion } from 'framer-motion'
+import Error404 from './pages/404'
+import 'animate.css';
 
 
 
 function App() { 
 
   const [keyword, setKeyWord] = useState('morty')
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  };
+  
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    }
+  };
+
 
 
   return (
-      <div id='inicio' className="app">
-        <section className='app__content'>
-        {/* <h1>gifON</h1> */}
+      <div id='inicio' className="App">
+        <section className='App-wrapper'>
           <Link to='/'>
-          <motion.img 
+          {/* <motion.img 
                 initial={{
                   y:0,
                   scale: 0
@@ -30,7 +51,17 @@ function App() {
                   y: 0,
                   scale: 1,
               }}
-            className='app__img' src='./gifshoot_logo.svg'/>
+            className='app__img' src='./gifshoot_logo.svg'/> */}
+            <motion.h1 
+                className="App-h1"
+                variants={container}
+                initial="hidden"
+                animate="visible">
+                  gifsh
+                <motion.span variants={item} className='App-span'>o</motion.span>
+                <motion.span variants={item} className='App-span'>o</motion.span>
+                <motion.span variants={item} className='App-span'>o</motion.span>
+                t</motion.h1>
           </Link>
           <GifsContext>
             <Route 
@@ -44,6 +75,10 @@ function App() {
             <Route 
               component={Detail}
               path='/gif/:id' 
+              />
+            <Route
+              component={Error404}
+              path='/404'
               />
           </GifsContext>
           <ArrowTop/>

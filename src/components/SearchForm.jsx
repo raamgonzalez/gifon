@@ -22,7 +22,7 @@ const SearchForm = ({onSubmit}) => {
         <input className='Search-input' type='text' placeholder='Search a gif' onChange={handlechange} value={keyword}/>
         <motion.button
         whileTap={{scale: 0.90}}
-        whileHover={{scale: 1.05, transition: "all 1s ease-in-out"}}
+        whileHover={{scale: 1.01, transition: "all 1s ease-in-out"}}
         onTap={{scale: 0.95}}
         className='Search-button'><IconSearch/></motion.button>
     </form>

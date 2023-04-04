@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@testing-library/react": "^14.0.0",
+    "animate.css": "^4.1.1",
     "framer-motion": "^10.10.0",
     "jest": "^29.5.0",
     "just-debounce-it": "^3.2.0",

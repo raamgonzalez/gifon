@@ -54,3 +54,4 @@ code .
 - Cambiar logotipo
 - Cambiar animación de Logotipo
 - Agregar categorias
+- Mejorar page error 404
