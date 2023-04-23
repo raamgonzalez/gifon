@@ -11,11 +11,14 @@
     &-arrow{
     background-color: #E7E15F;
     color: #080116;
-    font-size: 4rem;
+    // font-size: 4rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
 
         @include mb(){
-            font-size: 3rem;
+            width: 3rem;
+            height: 3rem;
         }
 
     }

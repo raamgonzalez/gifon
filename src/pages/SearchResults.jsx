@@ -27,7 +27,7 @@ const SearchResults = ({ params }) => {
         : <>
           <h3 className='App-title'>{decodeURI(keyword[0].toUpperCase() + keyword.substring(1))}</h3>
           <ListOfGifs gifs={gifs} />
-          </>}
+        </>}
       <div id='visor' ref={externalRef} />
     </>
   )
