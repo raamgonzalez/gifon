@@ -1,8 +1,14 @@
+.App-wrapper{
+    width: 100%;
+
+}
+
+
 .home{
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
     margin: 0 auto;
 
@@ -20,6 +26,8 @@
         .home__lastsearch{
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            width: 100%;
         }
         
 

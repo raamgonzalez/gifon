@@ -9,12 +9,9 @@ import GifsContext from './context/GifsContext'
 import ArrowTop from './ui/ArrowTop'
 import { motion } from 'framer-motion'
 import Error404 from './pages/404'
-import 'animate.css';
+import 'animate.css'
 
-
-
-function App() { 
-
+function App () {
   const [keyword, setKeyWord] = useState('morty')
   const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -26,64 +23,54 @@ function App() {
         staggerChildren: 0.2
       }
     }
-  };
-  
+  }
+
   const item = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
-      opacity: 1,
+      opacity: 1
     }
-  };
-
-
+  }
 
   return (
-      <div id='inicio' className="App">
-        <section className='App-wrapper'>
-          <Link to='/'>
-          {/* <motion.img 
-                initial={{
-                  y:0,
-                  scale: 0
-              }}
-              animate={{
-                  y: 0,
-                  scale: 1,
-              }}
-            className='app__img' src='./gifshoot_logo.svg'/> */}
-            <motion.h1 
-                className="App-h1"
-                variants={container}
-                initial="hidden"
-                animate="visible">
-                  gifsh
-                <motion.span variants={item} className='App-span'>o</motion.span>
-                <motion.span variants={item} className='App-span'>o</motion.span>
-                <motion.span variants={item} className='App-span'>o</motion.span>
-                t</motion.h1>
-          </Link>
-          <GifsContext>
-            <Route 
-              component={Home}
-              path='/'
-              />
-            <Route 
-              component={SearchResults}
-              path='/search/:keyword'
-              />
-            <Route 
-              component={Detail}
-              path='/gif/:id' 
-              />
-            <Route
-              component={Error404}
-              path='/404'
-              />
-          </GifsContext>
-          <ArrowTop/>
-        </section>
-      </div>
+    <div id='inicio' className='App'>
+      <section className='App-wrapper'>
+        <Link to='/'>
+          <motion.h1
+            className='App-h1'
+            variants={container}
+            initial='hidden'
+            animate='visible'
+          >
+            gifsh
+            <motion.span variants={item} className='App-span'>o</motion.span>
+            <motion.span variants={item} className='App-span'>o</motion.span>
+            <motion.span variants={item} className='App-span'>o</motion.span>
+            t
+          </motion.h1>
+        </Link>
+        <GifsContext>
+          <Route
+            component={Home}
+            path='/'
+          />
+          <Route
+            component={SearchResults}
+            path='/search/:keyword'
+          />
+          <Route
+            component={Detail}
+            path='/gif/:id'
+          />
+          <Route
+            component={Error404}
+            path='/404'
+          />
+        </GifsContext>
+        <ArrowTop />
+      </section>
+    </div>
   )
 }
 

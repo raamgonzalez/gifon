@@ -3,11 +3,21 @@
     bottom: 3rem;
     right: 5rem;
 
+        @include mb(){
+            bottom: 1rem;
+            right: 1rem;
+        }
+
     &-arrow{
     background-color: #E7E15F;
     color: #080116;
     font-size: 4rem;
     border-radius: 50%;
+
+        @include mb(){
+            font-size: 3rem;
+        }
+
     }
 }
 
