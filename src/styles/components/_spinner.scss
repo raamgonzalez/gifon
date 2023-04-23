@@ -1,4 +1,13 @@
+
+.spinner{
+    margin: 5rem auto;
+    display: grid;
+    place-items: center;
+}
+
 .custom-loader {
+
+
     --d:22px;
     width: 4px;
     height: 4px;

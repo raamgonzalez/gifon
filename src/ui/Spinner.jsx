@@ -1,11 +1,11 @@
 import React from 'react'
 
 const Spinner = () => {
-    return (
-
-        <div class="custom-loader"></div>
-        // <div>Loading...</div>
-    )
+  return (
+    <section className='spinner'>
+      <div class='custom-loader' />
+    </section>
+  )
 }
 
 export default Spinner

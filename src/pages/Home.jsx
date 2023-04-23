@@ -1,13 +1,13 @@
-import { useState, useCallback } from 'react'
+import { useCallback } from 'react'
 import { useLocation } from 'wouter'
 import ListOfGifs from '../components/ListOfGifs'
 import useGifs from '../hooks/useGifs'
 import TrendingSearches from '../components/TrendingSearches'
 import SearchForm from '../components/SearchForm'
+import Spinner from '../ui/Spinner'
 
 const Home = () => {
-  const [keyword, setKeyword] = useState('')
-  const [path, pushLocation] = useLocation()
+  const [pushLocation] = useLocation()
   const { loading, gifs } = useGifs()
 
   const handleSubmit = useCallback(({ keyword }) => {
@@ -22,6 +22,7 @@ const Home = () => {
         <section className='home__section'>
           <section className='home__lastsearch lastsearch'>
             <h3 className='App-title'>Last search</h3>
+            {loading ? <Spinner /> : null}
             <ListOfGifs gifs={gifs} />
           </section>
           <TrendingSearches />
